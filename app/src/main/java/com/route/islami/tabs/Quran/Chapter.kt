@@ -1,4 +1,4 @@
-package com.route.islami
+package com.route.islami.tabs.Quran
 
 class Chapter(
     val ar_title: String,

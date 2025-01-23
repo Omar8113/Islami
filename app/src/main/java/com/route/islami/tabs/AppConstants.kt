@@ -1,6 +1,6 @@
-package com.route.islami.Fragments
+package com.route.islami.tabs
 
-import com.route.islami.Chapter
+import com.route.islami.tabs.Quran.Chapter
 
 object AppConstants {
     val arabicSuraName: List<String> = listOf(
