@@ -1,14 +1,14 @@
 package com.route.islami
 
-import HadithFragment
 import RadioFragment
 import SebhaFragment
 import android.os.Bundle
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.Fragment
-import com.route.islami.Fragments.Quran.QuranFragment
 import com.route.islami.databinding.ActivityMainBinding
+import com.route.islami.tabs.Quran.QuranFragment
+import com.route.islami.tabs.hadith.HadithFragment
 
 class MainActivity : AppCompatActivity() {
 
