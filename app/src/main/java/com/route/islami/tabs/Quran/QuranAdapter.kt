@@ -26,9 +26,20 @@ class QuranAdapter(val chapters: List<Chapter>) : RecyclerView.Adapter<QuranAdap
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
         val chapter: Chapter = chapters[position]
         holder.bind(chapter)
+        if (onItemClick != null) {
+            holder.itemView.setOnClickListener {
+                onItemClick!!.onItemClick(position, chapter)
+            }
+        }
     }
 
     override fun getItemCount(): Int = chapters.size
+
+    var onItemClick: OnItemClick? = null
+
+    fun interface OnItemClick {
+        fun onItemClick(position: Int, chapter: Chapter)
+    }
 
 
 }

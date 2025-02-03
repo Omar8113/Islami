@@ -1,5 +1,6 @@
 package com.route.islami.tabs.Quran
 
+import android.content.Intent
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
@@ -24,6 +25,11 @@ class QuranFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         adapter = QuranAdapter(chaptersList)
+        adapter.onItemClick = QuranAdapter.OnItemClick { position, chapter ->
+            val intent = Intent(activity, SuraDetailsActivity::class.java)
+            intent.putExtra("Chapter", chapter)
+            startActivity(intent)
+        }
         binding.quranRv.adapter = adapter
     }
 }
